@@ -124,7 +124,6 @@ TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 1023
 TW_DEFAULT_BRIGHTNESS := 420
 TW_INCLUDE_NTFS_3G := true
-TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
