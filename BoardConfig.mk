@@ -130,6 +130,9 @@ RECOVERY_SDCARD_ON_DATA := true
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Partitions (listed in the file) to be wiped under recovery.
+TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
+
 # TWRP - Crypto
 TW_INCLUDE_CRYPTO := true
 
