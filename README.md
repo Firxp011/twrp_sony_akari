@@ -23,7 +23,7 @@ Battery | Li-Po 3180 mAh, non-removable
 Display | 1080 x 2160 pixels, IPS LCD, 18:9 ratio (~424 ppi density)
 Camera  | 19 MP, f/2.0, 25mm (wide), 1/2.3", 1.22µm, predictive PDAF, Laser AF
 
-## After you've built a custom recovery using this tree, you can enter the following command in fastboot to flash it (yes, the recovery is stored in `vendor_boot`)
+## After you've built a custom recovery using this tree, you can enter the following command in fastboot to boot it
 
 ```
 fastboot boot twrp.img
