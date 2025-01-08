@@ -36,25 +36,28 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
-BOARD_BOOTIMG_HEADER_VERSION := 1
-BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
+NEED_KERNEL_MODULE_SYSTEM := true
 
-BOARD_KERNEL_CMDLINE = androidboot.hardware=qcom
-BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
-BOARD_KERNEL_CMDLINE += ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
-BOARD_KERNEL_CMDLINE += service_locator.enable=1
-BOARD_KERNEL_CMDLINE += swiotlb=2048
-BOARD_KERNEL_CMDLINE += androidboot.configfs=true
-BOARD_KERNEL_CMDLINE += loop.max_part=7
-BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
-BOARD_KERNEL_CMDLINE += panic_on_err=1
-BOARD_KERNEL_CMDLINE += msm_drm.dsi_display0=dsi_panel_cmd_display:config0
+BOARD_KERNEL_CMDLINE := \
+    androidboot.hardware=qcom \
+    androidboot.usbcontroller=a600000.dwc3 \
+    msm_rtb.filter=0x237 \
+    ehci-hcd.park=3 \
+    lpm_levels.sleep_disabled=1 \
+    service_locator.enable=1 \
+    swiotlb=2048 \
+    androidboot.configfs=true \
+    loop.max_part=7 \
+    androidboot.usbcontroller=a600000.dwc3 \
+    panic_on_err=1 \
+    msm_drm.dsi_display0=dsi_panel_cmd_display:config0
+
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Prebuilt
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
