@@ -38,7 +38,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 PRODUCT_PACKAGES += \
     otapreopt_script
-    
+
 # QCOM Decryption
 PRODUCT_PACKAGES += \
     qcom_decrypt \
