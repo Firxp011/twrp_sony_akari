@@ -6,6 +6,7 @@
 #
 
 DEVICE_PATH := device/sony/akari
+
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Broken Rules

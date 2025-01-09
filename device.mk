@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/sony/akari
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 26
 
