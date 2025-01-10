@@ -54,6 +54,10 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 NEED_KERNEL_MODULE_SYSTEM := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 
+TARGET_KERNEL_SOURCE := kernel/sony/sdm845
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CONFIG := tama_akari_defconfig
+
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
     androidboot.usbcontroller=a600000.dwc3 \
@@ -71,7 +75,7 @@ BOARD_KERNEL_CMDLINE := \
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Prebuilt
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := akari
