@@ -147,8 +147,12 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 RECOVERY_SDCARD_ON_DATA := true
 
+# Device Version
+TW_DEVICE_VERSION := akari
+
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_SYSTEM := system
 
 # Partitions (listed in the file) to be wiped under recovery.
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
