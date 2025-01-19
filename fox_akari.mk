@@ -44,3 +44,4 @@ OF_OPTIONS_LIST_NUM := 6
 
 # Recovery additional features
 OF_AB_DEVICE := 1
+OF_FORCE_PREBUILT_KERNEL := 1
