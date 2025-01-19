@@ -75,6 +75,9 @@ BOARD_KERNEL_CMDLINE := \
 
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
+PRODUCT_COPY_FILES += \
+    $(TARGET_OUT_INTERMEDIATES)/kernel:$(TARGET_OUT)/target/product/$(TARGET_DEVICE)/kernel
+
 # Prebuilt
 #TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
